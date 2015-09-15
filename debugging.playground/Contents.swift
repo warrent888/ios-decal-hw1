@@ -15,11 +15,11 @@ class Foo {
     var wordB : String!
     
     init (words: [String?]) {
-        wordA = words[0]?
-        wordB = words[1]?
+        wordA = words[0]
+        wordB = words[1]
     }
     
-//: [EXPLAIN YOUR ANSWER TO Q1 HERE]
+//: You don't need the question marks for wordA and wordB's assignments.  The compiler already knows wordA and wordB are optionals.
     
 
     
@@ -30,16 +30,16 @@ class Foo {
         let reversedWords = words.map() {String($0.characters.reverse())}
         var numElements = words.count
         
-        for let i = 0; i < numElements; i++ {
+        for var i = 0; i < numElements; i++ {
             if words[i] != reversedWords[i] {
                 return false
             }
         }
         
-        return nil
+        return true
     }
     
-//: [EXPLAIN YOUR ANSWER TO Q2 HERE]
+//: i is a constant (let).  Because of this, it won't be able to increment and loop.  Should be returning true at the end.
     
     
     
@@ -47,7 +47,7 @@ class Foo {
 //: The method should be returning true or false -- what's wrong?
 //: Are we initializing the dictionary correctly?
     func isAnagram(wordA: String, wordB: String) -> Bool? {
-        var countLetters : [Character : Int]
+        var countLetters = [Character : Int]()
         var lenA = wordA.characters.count
         var lenB = wordB.characters.count
         
@@ -85,7 +85,7 @@ class Foo {
     }
 }
 
-//: [EXPLAIN YOUR ANSWER TO Q3 HERE]
+//: Dictionary not initialized properly with () object creation and assignment operator.
 
 
 //: **Do not** change anything below.
