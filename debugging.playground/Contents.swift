@@ -28,14 +28,13 @@ class Foo {
     
     func arePalindromes(words: [String]) -> Bool! {
         let reversedWords = words.map() {String($0.characters.reverse())}
-        var numElements = words.count
+        let numElements = words.count
         
         for var i = 0; i < numElements; i++ {
             if words[i] != reversedWords[i] {
                 return false
             }
         }
-        
         return true
     }
     
@@ -81,7 +80,7 @@ class Foo {
             }
         }
         
-        return nil
+        return true
     }
 }
 
