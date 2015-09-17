@@ -26,7 +26,7 @@ class Foo {
 //: ## Q2: Variable Types and Function Types
 //: Why does the compiler dislike the for loop? Also, what should we return?
     
-    func arePalindromes(words: [String]) -> Bool! {
+    class func arePalindromes(words: [String]) -> Bool! {
         let reversedWords = words.map() {String($0.characters.reverse())}
         let numElements = words.count
         
@@ -38,14 +38,14 @@ class Foo {
         return true
     }
     
-//: i is a constant (let).  Because of this, it won't be able to increment and loop.  Should be returning true at the end.
+//: i is a constant (let).  Because of this, it won't be able to increment and loop.  Should be returning true at the end.  Also need to make it a static method.
     
     
     
 //: ## Q3: More functions, and object initialization
 //: The method should be returning true or false -- what's wrong?
 //: Are we initializing the dictionary correctly?
-    func isAnagram(wordA: String, wordB: String) -> Bool? {
+    class func isAnagram(wordA: String, wordB: String) -> Bool? {
         var countLetters = [Character : Int]()
         var lenA = wordA.characters.count
         var lenB = wordB.characters.count
@@ -84,7 +84,7 @@ class Foo {
     }
 }
 
-//: Dictionary not initialized properly with () object creation and assignment operator.
+//: Dictionary not initialized properly with () object creation and assignment operator.  Also need to make it a static method.
 
 
 //: **Do not** change anything below.
